@@ -20,6 +20,7 @@ import java.util.Locale;
 
 /**
  * 小悬浮窗
+ * 简单的数字时钟，可点击打开大悬浮窗，可随意拖动位置
  *
  * @author SJL
  * @date 2016/11/30 21:36
@@ -90,6 +91,9 @@ public class FloatWindowSmall extends LinearLayout {
         return super.onTouchEvent(event);
     }
 
+    /**
+     * 打开大悬浮窗
+     */
     private void openFloatWindowBig() {
         FloatWindowManager.getInstance(context).closeFloatWindowSmall();
         FloatWindowManager.getInstance(context).showFloatWindowBig(context);

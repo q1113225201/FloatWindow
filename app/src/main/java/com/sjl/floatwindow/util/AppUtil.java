@@ -18,12 +18,6 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-/**
- * App常用工具
- *
- * @author SJL
- * @date 2016/11/21 21:33
- */
 public class AppUtil {
     /**
      * 获取所有桌面应用
@@ -40,7 +34,7 @@ public class AppUtil {
         for (ResolveInfo resolveInfo : resolveInfoList) {
             list.add(resolveInfo.activityInfo.packageName);
         }
-//        Log.i("homelist",list.toString());
+        Log.i("homeList",list.toString());
         return list;
     }
 
@@ -109,7 +103,7 @@ public class AppUtil {
             List<ActivityManager.RunningTaskInfo> runningTaskInfoList = activityManager.getRunningTasks(1);
             packname = runningTaskInfoList.get(0).topActivity.getPackageName();
         }
-//        Log.i("latest",packname==null?"null":packname);
+        Log.i("latest",packname==null?"null":packname);
         return packname;
     }
 

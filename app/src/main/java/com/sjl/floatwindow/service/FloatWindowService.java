@@ -14,6 +14,12 @@ import com.sjl.floatwindow.util.AppUtil;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * 悬浮窗服务
+ *
+ * @author SJL
+ * @date 2016/11/30 21:35
+ */
 public class FloatWindowService extends Service {
     private Context context;
 
@@ -37,6 +43,9 @@ public class FloatWindowService extends Service {
         return super.onStartCommand(intent, flags, startId);
     }
 
+    /**
+     * 后台检测刷新任务
+     */
     class RefreshTask extends TimerTask {
 
         @TargetApi(Build.VERSION_CODES.M)
@@ -81,51 +90,7 @@ public class FloatWindowService extends Service {
                     }
                 });
             }
-            /*if(AppUtil.isBackground(context)&&!AppUtil.isHome(context)) {
-                if (FloatWindowManager.getInstance(context).isFloatWindowShowing()) {
-                    handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            //已显示悬浮窗，更新小悬浮窗
-                            FloatWindowManager.getInstance(context).updateFloatWindowSmall();
-                        }
-                    });
-                } else if (!FloatWindowManager.getInstance(context).isFloatWindowShowing()) {
-                    handler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            //未显示悬浮窗，则显示小悬浮窗
-                            FloatWindowManager.getInstance(context).showFloatWindowSmall(context);
-                        }
-                    });
-                }
-            }else{
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        FloatWindowManager.getInstance(context).closeAllFloatWindow();
-                    }
-                });
-            }*/
-            /*if (FloatWindowManager.getInstance(context).isFloatWindowShowing()) {
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        //已显示悬浮窗，更新小悬浮窗
-                        FloatWindowManager.getInstance(context).updateFloatWindowSmall();
-                    }
-                });
-            } else if (!FloatWindowManager.getInstance(context).isFloatWindowShowing()) {
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        //未显示悬浮窗，则显示小悬浮窗
-                        FloatWindowManager.getInstance(context).showFloatWindowSmall(context);
-                    }
-                });
-            }*/
         }
-
     }
 
     @Override

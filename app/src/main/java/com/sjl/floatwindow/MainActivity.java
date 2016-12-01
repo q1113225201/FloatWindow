@@ -139,10 +139,10 @@ public class MainActivity extends Activity {
      * @param view
      */
     public void authorizationUsage(View view){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
         } else {
-            Toast.makeText(this, "只有4.4以上手机需要查看应用使用情况权限", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "只有5.0以上手机需要查看应用使用情况权限", Toast.LENGTH_SHORT).show();
         }
     }
 

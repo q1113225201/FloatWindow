@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="开启悬浮窗服务后，在应用处于后台运行时显示时间悬浮窗，可任意拖动，也可以点击显示大悬浮窗。" />
+        android:text="开启悬浮窗服务后，在桌面时显示时间悬浮窗，可随意拖动，也可以点击显示大悬浮窗。" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,5 +37,5 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="注:\n1、5.0之后getRunningTasks废弃，使用usage；6.0之后查看应用使用情况需要手动开启权限。\n2、6.0之后悬浮窗权限默认关闭，需要手动开启。" />
+        android:text="注:\n1、5.0之后getRunningTasks废弃，使用usage，查看应用使用情况需要手动开启权限。\n2、6.0之后悬浮窗权限默认关闭，需要手动开启。" />
 </LinearLayout>

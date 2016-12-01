@@ -8,9 +8,11 @@ import com.sjl.floatwindow.view.FloatWindowProgress;
 import com.sjl.floatwindow.view.FloatWindowSmall;
 
 /**
- * Created by yanfa on 2016/11/23.
+ * 悬浮窗管理
+ *
+ * @author SJL
+ * @date 2016/11/30 21:34
  */
-
 public class FloatWindowManager {
     private static FloatWindowManager floatWindowManager;
 
@@ -76,7 +78,6 @@ public class FloatWindowManager {
             floatWindowBig = new FloatWindowBig(context);
             this.context = context;
         }
-        //floatWindowManager = new FloatWindowManager(context);
         getWindowManager().addView(floatWindowBig, floatWindowBig.layoutParams);
     }
 
