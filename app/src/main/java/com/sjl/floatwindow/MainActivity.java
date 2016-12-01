@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.sjl.floatwindow.service.FloatWindowService;
 
+
 public class MainActivity extends Activity {
     private static final int REQUEST_ACTION_USAGE_ACCESS_SETTINGS = 10;
     private static final int REQUEST_ACTION_MANAGE_OVERLAY_PERMISSION = 11;
